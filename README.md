@@ -8,11 +8,17 @@ Do Los Angeles neighborhoods with many limited-English households get slower or 
 - **No reporting gap at the tract level.** Limited-English tracts file *more* resident requests per household (+11% per 10 points, 95% CI +8% to +15%, adjusted for income, renter share, building age and density).
 - **Channels differ.** 42% of requests in the highest limited-English quintile come through the mobile app, against 31% in the lowest.
 
+## Dashboard
+
+[![Power BI dashboard preview](dashboard/LA311_dashboard.png)](dashboard/LA311_dashboard.pdf)
+
+[Download the dashboard as a PDF](dashboard/LA311_dashboard.pdf). Medians are Kaplan–Meier estimates that count open requests as still waiting.
+
 ## Recommendation
 
-- **Don't treat language access as the main lever for faster 311 closure.** Look first at the slowest services: encampment requests take a median of 27–45 days and streetlights 80–130 days, with a quarter to a third still open, in every kind of neighborhood.
+- **Don't treat language access as the main lever for faster 311 closure.** Look first at the slowest services: encampment requests take a median of about 45–58 days and streetlights about 131–218 days, with a fifth to over a third still open, in every kind of neighborhood.
 - **Keep supporting the channels these residents already use,** especially the mobile app, and test whether adding languages there matters.
-- **Check the 10 to 46 tracts** in the top limited-English quintile that file well below what their housing predicts, using a field visit or a community partner. This is the only way to tell fewer problems from fewer reports.
+- **Check the 10 tracts** in the top limited-English quintile that file far fewer requests than their housing predicts, using a field visit or a community partner. This is the only way to tell fewer problems from fewer reports.
 - **Collect better data:** the language of each 311 contact, administrative-closure flags and true completion dates.
 
 ## Repository contents
@@ -24,6 +30,7 @@ Do Los Angeles neighborhoods with many limited-English households get slower or 
 | `notebooks/03_resolution_speed.ipynb` | Kaplan–Meier and Cox models of time to close |
 | `notebooks/04_reporting_gap.ipynb` | Negative binomial model of requests per household |
 | `notebooks/05_findings_and_recommendation.ipynb` | Headline numbers, robustness, Power BI extracts |
+| `dashboard/` | Power BI dashboard export (PDF and preview image) |
 | `scripts/pull_acs.py` | Downloads ACS 5-year tract estimates from the Census API |
 | `scripts/tile_stats.py` | Median days to close by quintile (a dashboard tile) |
 
